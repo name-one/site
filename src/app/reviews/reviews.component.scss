@@ -1,0 +1,10 @@
+@import '../../assets/common-styles/variables';
+@import '../../assets/common-styles/section/section';
+@import '../../assets/common-styles/review/review';
+.section{
+  &_rev{
+  background-image: url('/assets/dot.png');
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  }
+}

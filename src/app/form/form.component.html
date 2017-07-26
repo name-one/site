@@ -1,0 +1,32 @@
+<section class='section section_form'>
+  <h2 class='section__title'>Send an Online Enquiry</h2>
+  <div class="container">
+    <div class="row">
+      <form class="col-md-10 col-md-offset-1 form" (submit)='validate()' #form='ngForm'>
+        <div class="row">
+          <div class="col-md-12 form__text">All fields marked with * are required</div>
+        </div>
+        <div class="col-md-12">
+          <input type="text" class="form__input" placeholder='YOUR NAME*' required name='name' [(ngModel)]='name' maxlength='40' >
+        </div>
+        <div class="col-md-12">
+          <input type="text" class="form__input" placeholder='COMPANY*' required maxlength='40' name='company' [(ngModel)]='company'>
+        </div>
+        <div class="col-md-12">
+          <input type="text" class="form__input"placeholder='JOB TITLE' maxlength='40' name='job' [(ngModel)]='jobTitle'>
+        </div>
+        <div class="col-md-12">
+          <input type="email" class="form__input" placeholder='EMAIL*' required maxlength='40' name='email' [(ngModel)]='email' [ngClass]="{'invalid': !correctEmail}" (blur)='checkMail()'>
+        </div>
+        <div class="col-md-12">
+          <input type="text" class="form__input" placeholder='COUNTRY' maxlength='40' name='country' [(ngModel)]='country'>
+        </div>
+        <div class="col-md-12">
+          <textarea  class="form__textarea" placeholder='MESSAGE/HOW WE CAN HELP?*'required maxlength='1000' name='message' [(ngModel)]='message'></textarea>
+        </div>
+        <button class="form__submit" [disabled]='form.form.invalid'>Submit Request</button>
+        <div class="col-md-12 form__status" *ngIf='state.show' (click)='state.show=false'>{{state.message}}</div>
+      </form>
+    </div>
+  </div>
+</section>

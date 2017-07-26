@@ -1,0 +1,27 @@
+@import '../variables';
+.review{
+  margin-bottom: 100px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  &__name{
+    margin-bottom: 1em;
+    font-family: $font-bold;
+  }
+  &__img{
+    width: 200px;
+  }
+  &__img-container{
+    overflow: hidden;
+    padding: 0;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+  }
+  &__text-body{
+    width: calc(100% - 200px);
+    padding-left: 100px;
+    background-color: #fff;
+  }
+}

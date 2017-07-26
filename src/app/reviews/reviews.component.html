@@ -1,0 +1,20 @@
+<section class='section section_rev'>
+  <h2 class="section__title">Client Reviews</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" *ngFor='let review of reviews' class='review'>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 review__img-container">
+              <app-rview-image [src]='review.imageId'></app-rview-image>
+            </div>
+            <div class="col-md-9 review__text-body">
+              <h3 class='review__name'>{{review.name}}</h3>
+              <p class='review__text'>{{review.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
