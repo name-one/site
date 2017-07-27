@@ -7,7 +7,7 @@
   @include media(992){
     background-attachment: initial;
     background-image: none;
-    background-color: $green;
+    background-color: darken($green,20%);
     padding: {
       right: 15px;
       left: 15px;

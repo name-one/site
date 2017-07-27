@@ -128,6 +128,9 @@
     }
   }
   @include media(992){
+    &_green{
+      background-color: darken($green,20%);
+    }
     padding: 20px 15px;
     width: 70%;
     margin: 0 auto 25px !important;
