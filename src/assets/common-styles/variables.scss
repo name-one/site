@@ -7,3 +7,8 @@ $orange: #fc8c1c;
 $green: #85bc00;
 $font-bold: 'AG Foreigner Light', serif;
 $font: 'AG Foreigner Light-Plain', serif;
+@mixin media($res, $scale: 'max') {
+  @media only screen and ($scale+'-width:'+$res+'px'){
+    @content
+  }
+}

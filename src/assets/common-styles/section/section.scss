@@ -57,6 +57,9 @@
       text-decoration: none;
       display: inline-block;
       margin: 1em auto;
+      @include media(400){
+        font-size: 1.2rem;
+      }
     }
     .footer-text{
       margin: 0 auto;
@@ -78,5 +81,8 @@
         background-color: darken(#fff,50%);
       }
     }
+  }
+  @include media(992){
+    padding: 25px 0;
   }
 }

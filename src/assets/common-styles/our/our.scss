@@ -12,6 +12,21 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    @include media(1400){
+      width: 1200px;
+      padding: 0 15px;
+      justify-content: space-between;
+    }
+    @include media(992){
+      display: block;
+    }
+  }
+  @include media(1400){
+    background-attachment: initial;
+    background-size: cover;
+  }
+  @include media(992){
+    padding: 25px 0;
   }
 }
 .our-item{
@@ -31,7 +46,7 @@
     height: 110px;
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-image: url("/assets/o-bottom.png");
   }
   &:not(:last-of-type){
@@ -52,14 +67,31 @@
     text-align: center;
     margin-bottom: 1em;
     line-height: 1.33em;
+    @include media(992){
+      br{
+        display: none;
+      }
+    }
   }
   &__icon{
     background-image: url("/assets/diamond.svg");
     height: 170px;
     width: 170px;
     margin: 50px auto;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    @include media(1400){
+      margin: 25px auto;
+    }
+    @include media(992){
+      height: 100px;
+      width: 100px;
+      margin: {
+        top: 0;
+        bottom: 15px;
+      };
+    }
     &_ok{
       background-image: url("/assets/ok.svg");
     }
@@ -81,5 +113,35 @@
     &::after{
       background-image: url("/assets/g-bottom.png");
     }
+  }
+  @include media(1400){
+    width: 30%;
+    &__title{
+      margin: 0;
+    }
+    &__text{
+      margin: {
+        top: 1em;
+        bottom: 0;
+      };
+      text-align: left;
+    }
+  }
+  @include media(992){
+    padding: 20px 15px;
+    width: 70%;
+    margin: 0 auto 25px !important;
+    &::after{
+      display: none;
+    }
+    &:last-of-type{
+      margin-bottom: 0 !important;
+    }
+    &__text{
+      text-align: center;
+    }
+  }
+  @include media(768){
+    width: 90%;
   }
 }

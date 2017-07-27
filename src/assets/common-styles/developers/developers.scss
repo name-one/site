@@ -4,4 +4,13 @@
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
+  @include media(992){
+    background-attachment: initial;
+    background-image: none;
+    background-color: $green;
+    padding: {
+      right: 15px;
+      left: 15px;
+    };
+  }
 }
